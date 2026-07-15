@@ -2,6 +2,10 @@
 
 A simple desktop application to simulate and execute programs written in the Unlimited Register Machine (URM) language.
 
+![URM Simulator](docs/img/urm_simulator.png)
+
+*Execution trace of `Z(1); S(1); J(1,1,3)` — an infinite loop stopped by the max-iterations guard.*
+
 ## Prerequisites
 
 - Python 3.10+
