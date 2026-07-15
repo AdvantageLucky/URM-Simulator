@@ -32,6 +32,16 @@ More sample programs (including exponentiation `x^y`) are in [`program_examples.
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    code["URM source<br/>(GUI editor)"] --> lexer["Lexer<br/>tokenizer.py"]
+    lexer -- "tokens" --> parser["LL(1) Parser<br/>parser.py"]
+    parser -- "AST<br/>(instruction objects)" --> runtime["Runtime<br/>run_program.py"]
+    registers["Initial registers<br/>+ max iterations"] --> runtime
+    runtime -- "R1 result + execution trace" --> gui["Tkinter GUI<br/>trace viewer"]
+    parser -- "syntax errors" --> gui
+```
+
 ```
 src/
 ├── compiler/
